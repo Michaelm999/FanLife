@@ -1,0 +1,10 @@
+<h1>Add New</h1>
+<div class="input">
+<%= form_for @fandom do |n| %>
+  <%= n.text_field :title, placeholder: "Title" %>
+  <%= n.text_field :source, placeholder: "Film/Show" %>
+  <%= n.text_area :description, placeholder: "Description" %>
+
+  <%= n.submit %>
+<% end %>
+</div>

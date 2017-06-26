@@ -1,0 +1,9 @@
+<h1>Edit the Fandom!</h1>
+<div class="input">
+<%= form_for @fandom do |f| %>
+  <%= f.text_field :title, placeholder: "Name" %>
+  <%= f.text_field :source, placeholder: "Film/Show" %>
+  <%= f.text_area :description, placeholder: "Description" %>
+  <%= f.submit %>
+<% end %>
+</div>
