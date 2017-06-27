@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170626164510) do
+ActiveRecord::Schema.define(version: 20170626221612) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,4 +23,24 @@ ActiveRecord::Schema.define(version: 20170626164510) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "fandoms_users", force: :cascade do |t|
+    t.bigint "fandom_id"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["fandom_id"], name: "index_fandoms_users_on_fandom_id"
+    t.index ["user_id"], name: "index_fandoms_users_on_user_id"
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "name"
+    t.string "email"
+    t.string "password_digest"
+    t.string "bio"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_foreign_key "fandoms_users", "fandoms"
+  add_foreign_key "fandoms_users", "users"
 end
