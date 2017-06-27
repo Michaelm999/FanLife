@@ -7,7 +7,8 @@ def new
 end
 
 def create
-    if @user.fandoms != @fandom
+    @favorite == @user.fandoms
+    if @favorite != @fandom
       @user.fandoms << @fandom
       redirect_to user_path
     else
@@ -15,6 +16,6 @@ def create
     end
 end
 def destroy
-  @user.fandoms.id = @user.fandoms.id - @fandom
+  @user.fandoms = @user.fandoms- @fandom
   redirect_to fandom_path
 end

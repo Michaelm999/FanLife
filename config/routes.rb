@@ -1,18 +1,5 @@
 Rails.application.routes.draw do
 
-  get 'comments/index'
-
-  get 'comments/show'
-
-  get 'comments/new'
-
-  get 'comments/create'
-
-  get 'comments/edit'
-
-  get 'comments/update'
-
-  get 'comments/destroy'
 
     root 'front_page#index'
 
@@ -21,8 +8,10 @@ Rails.application.routes.draw do
     get '/fandom/new' => 'fandom#new', as: :new_fandom
     #show one specific page
     get '/fandom/:id' => 'fandom#show', as: :fandom
+    get '/fandom/:id/comments' => 'comments#show', as: :fandom_comments
     # insert new product into database
     post '/fandom' => 'fandom#create'
+    post '/fandom/:id/comments' => 'comments#create', as: :comment_section
     # render a form to edit
     get '/fandom/:id/edit' => 'fandom#edit', as: :edit_fandom
     # actually update

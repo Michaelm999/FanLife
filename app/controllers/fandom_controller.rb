@@ -5,6 +5,7 @@ class FandomController < ApplicationController
 
     def show
         @fandom = Fandom.find(params[:id])
+        @comment = Comment.new
     end
 
     def new

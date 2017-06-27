@@ -10,12 +10,12 @@ class CommentsController < ApplicationController
 
   def create
     @fandom = Fandom.find(params[:id])
-    @user = User.find(params[:id])
-    @fandom.comments.create{(
+    @user = current_user
+    @fandom.comments.create({
       content: params[:comment][:content]
-      )}
+      })
       
-      redirect_to fandom_path
+      redirect_to fandom_path @fandom
   end
 
   def edit

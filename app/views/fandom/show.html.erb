@@ -7,15 +7,15 @@
 <ul>
   <% @fandom.comments.each do |a| %>
   <li>
-  <%= a.content %><br>
-  <%= a.user.name %>
+  <%= a.content %> <br>
+  -<%= a.user.name %>
   </li>
   <% end %>
 </ul>
 
-<%= form_for [@fandom, @comment] do |f| %>
-  Comment <%= f.content %>
-  <%= f.submit %>
+<%= form_for [@fandom, @comment] do |a| %>
+  <%= a.text_area :content, placeholder: 'Comments' %>
+  <%= a.submit %>
 <% end %>
 
 <div class="guide">
