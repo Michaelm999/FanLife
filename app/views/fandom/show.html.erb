@@ -6,6 +6,7 @@
 <div class="guide">
 <%= link_to('Edit', edit_fandom_path(params[:id])) %>
 <%= link_to('Delete', @fandom, method: :delete, data: {confirm: 'Are you certain?'}) %>
-<%= link_to('Go Back', fandoms_path) %>
+<%= link_to('Favorite', favorite_path) %>
+<%= link_to('Back to Fandoms', fandoms_path) %>
 
 </div>
