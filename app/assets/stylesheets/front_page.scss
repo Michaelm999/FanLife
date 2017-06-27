@@ -3,7 +3,17 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .opening {
   text-align: center;
+      p {
+        font-size: 20px;
+      }
+
+      h1 {
+      font-family: cursive;
+      }
 }
-.opening p {
-  font-size: 18px;
+
+.start{
+    text-align: center;
+    font-size: 22px;
+    padding: 0px, 8px;
 }
