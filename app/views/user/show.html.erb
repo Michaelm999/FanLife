@@ -4,7 +4,7 @@
 <h3>Favorites</h3>
 <ul>
   <%= @user.fandoms.each do |f| %>
-  <li><%= link_to(f.title, fandom_path(f.id)) %></li>
+  <li> <%= link_to(f.title, fandom_path(f.id)) %> </li>
   <% end %>
 </ul>
 
