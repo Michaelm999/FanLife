@@ -31,9 +31,7 @@ class FandomController < ApplicationController
       end
 
       def update
-        puts "=========================="
         puts params
-        puts "=========================="
         @fandom = Fandom.find(params[:id])
         @fandom.title = params[:fandom][:title]
         @fandom.source = params[:fandom][:source]
