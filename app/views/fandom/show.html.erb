@@ -1,17 +1,30 @@
 <h1><%= @fandom.title %></h1>
 
-<h2><%= @fandom.source %></h2>
+<h2>Source: <%= @fandom.source %></h2>
 <p id="show"><%= @fandom.description %></p>
+
+<h3>Comments</h3>
+<ul>
+  <% @fandom.comments.each do |a| %>
+  <li>
+  <%= a.content %><br>
+  <%= a.user.name %>
+  </li>
+  <% end %>
+</ul>
+
+<%= form_for [@fandom, @comment] do |f| %>
+  Comment <%= f.content %>
+  <%= f.submit %>
+<% end %>
 
 <div class="guide">
 <%= link_to('Edit', edit_fandom_path(params[:id])) %>
 <%= link_to('Delete', @fandom, method: :delete, data: {confirm: 'Are you certain?'}) %>
 
-<% if @fandom.id != @user.fandoms.id %>
-<%= link_to('Favorite', favorite_path) %>
-else
+
 <%= link_to('Unfavorite', unfavorite_path) %>
-<% end %>
+<%= link_to('Favorite', favorite_path) %>
 
 <%= link_to('Back to Fandoms', fandoms_path) %>
 
