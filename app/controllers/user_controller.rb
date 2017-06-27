@@ -27,9 +27,7 @@ class UserController < ApplicationController
   end
 
   def update
-    puts "=========================="
     puts params
-    puts "=========================="
     @user = User.find(params[:id])
     @user.name = params[:user][:name]
     @user.bio = params[:user][:bio]

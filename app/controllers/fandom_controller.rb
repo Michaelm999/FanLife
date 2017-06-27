@@ -38,7 +38,7 @@ class FandomController < ApplicationController
         @fandom.description = params[:fandom][:description]
         @fandom.save
 
-        redirect_to fandoms_path
+        redirect_to fandom_path
       end
 
       def destroy
