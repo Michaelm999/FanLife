@@ -28,7 +28,7 @@
 <% if current_user.fandoms.include? @fandom %>
 <%= link_to('Unfavorite', unfavorite_path) %>
 <% else %>
-<%= link_to('Favorite', favorite_path) %>
+<%= link_to('Favorite', favorite_path(@fandom)) %>
 <% end %>
 
 </div>
