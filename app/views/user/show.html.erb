@@ -1,12 +1,14 @@
 <h1><%= @user.name %></h1>
-
+<h3>Bio</h3>
 <p><%= @user.bio %></p>
+
 <h3>Favorites</h3>
-<ul>
+<ul class="favs">
   <% @user.fandoms.each do |f| %>
   <li> <%= link_to(f.title, fandom_path(f.id)) %> </li>
   <% end %>
 </ul>
-
+<div class="tools">
 <%= link_to('Edit', edit_user_path) %>
 <%= link_to('Delete', @user, method: :delete, data: {confirm: 'Are you certain?'}) %>
+</div>

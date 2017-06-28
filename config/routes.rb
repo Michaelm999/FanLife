@@ -27,7 +27,7 @@ Rails.application.routes.draw do
     patch '/user/:id' => 'user#update'
     delete 'user/:id' => 'user#destroy'
 
-    get '/fandom/:id' => 'fandoms_user#new'
+  
     get '/fandom_favorite/:id' => 'fandoms_user#create', as: :favorite
     get 'fandom_unfavorite/:id' => 'fandoms_user#destroy', as: :unfavorite
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

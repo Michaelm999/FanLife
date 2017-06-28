@@ -15,7 +15,6 @@ class CommentsController < ApplicationController
     @comment.user = current_user
     @comment.save
     redirect_to fandom_path @fandom
-
   end
 
   def edit
