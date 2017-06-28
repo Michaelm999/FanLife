@@ -20,7 +20,7 @@
     <%= current_user.name %>
   <% end %></li>
         <li><%= link_to('Check out the Fandoms', fandoms_path) %></li>
-        <li><%= link_to 'logout', logout_path, method: "delete"%></li>
+        <li><%= link_to('logout', logout_path, method: "delete", data: {confirm: 'Are you sure?'})%></li>
         <% else %>
         <li><%= link_to 'Sign Up', new_user_path %></li>
         <li><%= link_to 'Login', login_path %></li>
