@@ -10,8 +10,10 @@ class SessionsController < ApplicationController
       #generate cookie for the user & redirect them
       session[:user_id] = @user.id
       redirect_to user_path(@user)
+      flash[:notice] = "Welcome"
     else
       redirect_to login_path
+      flash[:alert] = "Sorry, try again."
     end
   end
 
