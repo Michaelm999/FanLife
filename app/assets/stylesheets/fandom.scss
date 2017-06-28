@@ -9,8 +9,13 @@
 
 p {
   font-size: 17px;
-  font-family: verdana, sans-serif;
+  font-family: "Times New Roman", Georgia, serif;
   line-height: 18px;
+  padding-left: 7px;
+}
+
+.guide {
+  padding: inherit;
 }
 
 body {
@@ -22,11 +27,14 @@ body {
   font-size: 19px;
 }
 
-#show {
-  font-family: "Times New Roman", Georgia, serif;
-}
+// #show {
+//
+// }
 
 .comments {
   font-size: 15px;
   padding-bottom: 10px;
+}
+.fandom {
+  text-decoration: underline;
 }
