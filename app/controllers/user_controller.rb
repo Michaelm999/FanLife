@@ -48,6 +48,6 @@ class UserController < ApplicationController
     end
 
     def authorize
-        redirect_to login_path unless logged_in
+        redirect_to root_path unless logged_in
   end
 end
