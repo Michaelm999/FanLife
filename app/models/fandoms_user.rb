@@ -3,14 +3,14 @@ class FandomsUser < ApplicationRecord
   belongs_to :user
 end
 def new
-
 end
 
 def create
-  @user.fandoms << @fandom
+  @favorites = current_user.fandoms
+  @favorites << @fandom
   redirect_to user_path
 end
 def destroy
-  @user.fandoms = @user.fandoms- @fandom
-  redirect_to fandom_path
+  current_user.fandoms = current_user.fandoms - @fandom
+  redirect_to user_path
 end

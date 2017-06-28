@@ -20,7 +20,13 @@
 
 <div class="guide">
 <%= link_to('Edit', edit_fandom_path(params[:id])) %>
+
+<% if current_user.id === 2 %>
 <%= link_to('Delete', @fandom, method: :delete, data: {confirm: 'Are you certain?'}) %>
+<% end %>
+
 <%= link_to('Unfavorite', unfavorite_path) %>
+
 <%= link_to('Favorite', favorite_path) %>
+
 </div>

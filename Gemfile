@@ -6,7 +6,6 @@ git_source(:github) do |repo_name|
 end
 gem 'dotenv-rails', group: :development
 
-
 gem 'paperclip'
 gem 'aws-sdk'
 
