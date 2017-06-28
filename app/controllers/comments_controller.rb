@@ -1,5 +1,5 @@
 class CommentsController < ApplicationController
-  # require permit strong params`
+
   def index
   end
 
@@ -11,12 +11,11 @@ class CommentsController < ApplicationController
 
   def create
     @fandom = Fandom.find(params[:id])
-    @user = current_user
-    @fandom.comments.create(
-      params.require(:comment).permit(:content)
-      )
+    @comment = @fandom.comments.create(comment_params)
+    @comment.user = current_user
+    @comment.save
+    redirect_to fandom_path @fandom
 
-      redirect_to fandom_path @fandom
   end
 
   def edit
@@ -26,5 +25,10 @@ class CommentsController < ApplicationController
   end
 
   def destroy
+  end
+
+  private
+  def comment_params
+    params.require(:comment).permit(:content)
   end
 end
