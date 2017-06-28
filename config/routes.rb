@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
 
-
     root 'front_page#index'
 
     get '/fandom' => 'fandom#index', as: :fandoms
@@ -30,8 +29,8 @@ Rails.application.routes.draw do
     patch '/user/:id' => 'user#update'
     delete 'user/:id' => 'user#destroy'
 
-    get 'fandom/:id' => 'fandoms_user#new', as: :favorite
+    get '/fandom/:id' => 'fandoms_user#new', as: :favorite
     post '/fandom' => 'fandoms_user#create'
-    delete '/fandom/:id' => 'fandoms_user#destroy', as: :unfavorite
+    delete 'fandom/:id' => 'fandoms_user#destroy', as: :unfavorite
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
