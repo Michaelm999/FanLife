@@ -16,5 +16,8 @@
 <div>
   <%= f.text_area :bio, placeholder: 'Bio' %>
 </div>
+<div class="images">
+  <%= f.file_field :user_image, placeholder: 'Profile Pic' %>
+</div>
 <%= f.submit 'Create Account' %>
 <% end  %>

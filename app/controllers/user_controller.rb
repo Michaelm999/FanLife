@@ -34,9 +34,17 @@ class UserController < ApplicationController
     @user = User.find(params[:id])
     @user.name = params[:user][:name]
     @user.bio = params[:user][:bio]
-    @user.save
+    @user.user_image = params[:user][:user_image]
+    @user.user_id = @user.id
+      if @user.save
+        redirect_to user_path(@user)
+      else
+        p @user
+        p @user.errors.full_messages
+      end
 
-    redirect_to user_path(@user)
+
+
   end
 
   def destroy
@@ -48,7 +56,7 @@ class UserController < ApplicationController
 
   private
     def user_params
-        params.require(:user).permit(:name, :email, :password, :bio)
+        params.require(:user).permit(:name, :email, :password, :bio, :user_image)
     end
 
     def authorize

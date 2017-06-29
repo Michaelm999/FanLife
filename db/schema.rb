@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170627210604) do
+ActiveRecord::Schema.define(version: 20170629005719) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -49,6 +49,11 @@ ActiveRecord::Schema.define(version: 20170627210604) do
     t.string "bio"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "user_image_file_name"
+    t.string "user_image_content_type"
+    t.integer "user_image_file_size"
+    t.datetime "user_image_updated_at"
+    t.integer "user_id"
   end
 
   add_foreign_key "comments", "fandoms"

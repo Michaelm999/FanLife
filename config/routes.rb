@@ -24,10 +24,10 @@ Rails.application.routes.draw do
     get 'user/:id' => 'user#show', as: :user
     post '/user' => 'user#create'
     get '/user/:id/edit' => 'user#edit', as: :edit_user
-    patch '/user/:id' => 'user#update'
+    patch '/user/:id/edit' => 'user#update'
     delete 'user/:id' => 'user#destroy'
 
-  
+
     get '/fandom_favorite/:id' => 'fandoms_user#create', as: :favorite
     get 'fandom_unfavorite/:id' => 'fandoms_user#destroy', as: :unfavorite
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
