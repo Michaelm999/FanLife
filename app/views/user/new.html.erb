@@ -13,11 +13,12 @@
   <%= f.password_field :password, placeholder: "Password" %>
 </div>
 
-<div>
+<div class="area">
   <%= f.text_area :bio, placeholder: 'Bio' %>
 </div>
 <div class="images">
-  <%= f.file_field :user_image, placeholder: 'Profile Pic' %>
+  Profile Picture
+  <%= f.file_field :user_image %>
 </div>
 <%= f.submit 'Create Account' %>
 <% end  %>

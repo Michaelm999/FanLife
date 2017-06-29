@@ -1,9 +1,9 @@
 <h1>Edit</h1>
 <%= form_for @user, url:edit_user_path do |u| %>
 <%= u.text_field :name, placeholder: 'Name' %>
-<%= u.text_area :bio, placeholder: 'Bio' %>
+<%= u.text_area :bio, placeholder: 'Bio', class: "area" %>
 
-<div> Profile Image
+<div class="images"> Profile Image
 <%= u.file_field :user_image %>
 </div>
 <%= u.submit %>

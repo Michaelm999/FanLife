@@ -47,9 +47,6 @@ class UserController < ApplicationController
         p @user
         p @user.errors.full_messages
       end
-
-
-
   end
 
   def destroy
