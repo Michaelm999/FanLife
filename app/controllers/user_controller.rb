@@ -14,12 +14,17 @@ class UserController < ApplicationController
 
   def create
     @user = User.new user_params
+    @user.user_id = 0
     if @user.save
+      @user.user_id = @user.id
+      @user.save
       session[:user_id] = @user.id
       redirect_to user_path(@user)
       flash[:notice] = "Welcome"
     else
       redirect_to new_user_path
+      p @user
+      p @user.errors.full_messages
       flash[:alert] = "Sorry, try again."
     end
   end
