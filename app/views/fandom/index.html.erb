@@ -4,7 +4,8 @@
 
 <ul id="list">
   <% @fandoms.each do |f| %>
-<li style= "padding: 10px;"> <%= link_to(f.title, "/fandom/#{f.id}") %></li>
+<li style= "padding: 10px;"> <%= link_to(f.title, "/fandom/#{f.id}") %>
+</li>
   <% end %>
 </ul>
 <p>

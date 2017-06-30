@@ -1,8 +1,5 @@
 class CommentsController < ApplicationController
 
-  def index
-  end
-
   def show
   end
 
@@ -17,14 +14,6 @@ class CommentsController < ApplicationController
     redirect_to fandom_path @fandom
   end
 
-  def edit
-  end
-
-  def update
-  end
-
-  def destroy
-  end
 
   private
   def comment_params

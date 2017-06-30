@@ -23,8 +23,6 @@ class UserController < ApplicationController
       flash[:notice] = "Welcome"
     else
       redirect_to new_user_path
-      p @user
-      p @user.errors.full_messages
       flash[:alert] = "Sorry, try again."
     end
   end
@@ -41,12 +39,8 @@ class UserController < ApplicationController
     @user.bio = params[:user][:bio]
     @user.user_image = params[:user][:user_image]
     @user.user_id = @user.id
-      if @user.save
-        redirect_to user_path(@user)
-      else
-        p @user
-        p @user.errors.full_messages
-      end
+    @user.save
+    redirect_to user_path(@user)
   end
 
   def destroy

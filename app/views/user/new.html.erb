@@ -13,14 +13,14 @@
   <%= f.password_field :password, placeholder: "Password" %>
 </div>
 
-<div class="area">
-  <%= f.text_area :bio, placeholder: 'Bio' %>
+<div>
+  <%= f.text_area :bio, placeholder: 'Bio', class: 'form-control' %>
 </div>
 <div class="images">
   Profile Picture
   <%= f.file_field :user_image %>
 </div>
-<%= f.submit 'Create Account' %>
+<%= f.submit 'Create Account', class: 'btn btn-success' %>
 <% end  %>
 <div class= "back">
 <%= link_to('Go Back', root_path) %>
