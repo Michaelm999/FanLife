@@ -8,6 +8,6 @@ class FandomsUserController < ApplicationController
   def destroy
     @fandom = Fandom.find(params[:id])
     current_user.fandoms.delete(@fandom)
-    redirect_to user_path(current_user)
+    redirect_to fandom_path
   end
 end
