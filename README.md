@@ -13,7 +13,7 @@ I started out by creating a database for users to add, edit, and delete fandoms.
 
 After this, I developed a fandoms_user database, that allowed users to add fandoms to a 'favorites' list that is visible on their user page, and then remove them if they so wished. Following this, I added a comments database, which enables users to add comments to a fandom page. It also shows the name of the user that wrote the comment. Finally, I added a section to the user page that allows them to add a profile picture.
 
-You can look at my process [here](https://trello.com/b/pERwJFnw/project-2).
+You can look at my process on my Trello [here](https://trello.com/b/pERwJFnw/project-2).
 
 --
 # Next Steps
