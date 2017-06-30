@@ -1,6 +1,6 @@
 class FandomController < ApplicationController
   def index
-      @fandoms = Fandom.all
+      @fandoms = Fandom.order('title ASC')
     end
 
     def show
