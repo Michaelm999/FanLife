@@ -17,16 +17,16 @@ You can look at my process [here](https://trello.com/b/pERwJFnw/project-2).
 
 --
 
-#ERD
+# ERD
 
 ![erd](app/assets/images/ERD.jpg)
 
-
 --
 
-#Wireframe
+# Wireframe
 
 ![wireframe](app/assets/images/FanLife_Wireframe_(1).png)
+
 --
 
 # Next Steps
