@@ -24,7 +24,7 @@ My ultimate vision for this app is for it to be a community building app: a way 
 
 # Technology Used
 
-* html, css
+* HTML, CSS
 * Ruby on Rails
 * Bootstrap
 * Amazon Web Services/S3
