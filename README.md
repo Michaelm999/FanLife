@@ -16,13 +16,14 @@ After this, I developed a fandoms_user database, that allowed users to add fando
 You can look at my process [here](https://trello.com/b/pERwJFnw/project-2).
 
 --
-#ERD
 
+#ERD
 
 ![erd](app/assets/images/ERD.jpg)
 
 
 --
+
 #Wireframe
 
 ![wireframe](app/assets/images/FanLife_Wireframe_(1).png)
@@ -43,8 +44,8 @@ My ultimate vision for this app is for it to be a communtiy building app: a way 
 
 --
 # Unsolved Problems
-* When editing your user profile, you have to upload the profile photo each time, or else it will not show up on your page.
 
+* When editing your user profile, you have to upload the profile photo each time, or else it will not show up on your page.
 
 --
 
