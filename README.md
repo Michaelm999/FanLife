@@ -38,7 +38,7 @@ My ultimate vision for this app is for it to be a community building app: a way 
 # Installation/Startup
 To install this app you must run:
 
-* Fork from github repository
+* Fork from GitHub repository
 * git clone
 * bundle install
 * db:create
