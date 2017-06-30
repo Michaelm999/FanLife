@@ -21,9 +21,6 @@
   <% end %></li>
         <li><%= link_to('Check out the Fandoms', fandoms_path) %></li>
         <li><%= link_to('logout', logout_path, method: "delete", data: {confirm: 'Are you sure?'})%></li>
-        <% else %>
-        <li><%= link_to 'Sign In', login_path %></li>
-        <li><%= link_to 'New User', new_user_path %></li>
         <% end %>
           </ul>
         </li>
