@@ -33,6 +33,7 @@ My ultimate vision for this app is for it to be a community building app: a way 
 
 # Unsolved Problems
 * When editing your user profile, you have to upload the profile photo each time, or else it will not show up on your page.
+* When you edit a fandom, it jumps to the bottom of the list.
 
 
 # Installation/Startup
