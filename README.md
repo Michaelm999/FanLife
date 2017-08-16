@@ -4,7 +4,7 @@ FanLife is a social media app designed to cater to all the various fandoms that 
 
 This app will allow fans to create their own profiles and comment on thier favorite fandoms. In addition to commenting, users can create thier own fandom pages, and then edit them freely.
 
-You can see it [here](https://dry-cliffs-56058.herokuapp.com/)
+You can see it [here](https://fanlife.herokuapp.com/)
 
 --
 # Approach Taken
