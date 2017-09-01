@@ -11,6 +11,6 @@
   <% end %>
 </ul>
 <div class="tools">
-<%= link_to('Edit Your Page', edit_user_path) %> <br>
-<%= link_to('Delete Your Account', @user, method: :delete, data: {confirm: 'Are you certain?'}) %>
+<%= link_to('Edit Your Page', edit_user_path, class: 'btn btn-warning') %> <br>
+<%= link_to('Delete Your Account', @user, method: :delete, data: {confirm: 'Are you certain?'}, class: "btn btn-danger") %>
 </div>

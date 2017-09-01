@@ -13,22 +13,24 @@
   <% end %>
 </ul>
 
-<%= form_for [@fandom, @comment] do |a| %>
-  <%= a.text_area :content, placeholder: 'Comments' %>
-  <%= a.submit %>
-<% end %>
+  <%= form_for [@fandom, @comment] do |a| %><br>
+    <%= a.text_area :content, placeholder: 'Comments', id: 'comment-space' %><br>
+    <%= a.submit %>
+  <% end %>
+
+
 
 <div class="guide">
-<%= link_to('Edit', edit_fandom_path(params[:id])) %>
+<%= link_to('Edit', edit_fandom_path(params[:id]), class: "btn btn-primary") %>
 
 <% if current_user.id === 2 %>
-<%= link_to('Delete', @fandom, method: :delete, data: {confirm: 'Are you certain?'}) %>
+<%= link_to('Delete', @fandom, method: :delete, data: {confirm: 'Are you certain?'}, class: "btn btn-danger") %>
 <% end %>
 
 <% if current_user.fandoms.include? @fandom %>
-<%= link_to('Unfavorite', unfavorite_path) %>
+<%= link_to('Unfavorite', unfavorite_path, class: 'btn btn-warning') %>
 <% else %>
-<%= link_to('Favorite', favorite_path(@fandom)) %>
+<%= link_to('Favorite', favorite_path(@fandom), class: 'btn btn-success') %>
 <% end %>
-<%= link_to('Back', fandoms_path) %>
+<%= link_to('Back', fandoms_path, class: 'btn btn-default') %>
 </div>

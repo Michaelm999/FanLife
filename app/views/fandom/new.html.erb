@@ -3,8 +3,9 @@
 <%= form_for @fandom do |n| %>
   <%= n.text_field :title, placeholder: "Title" %>
   <%= n.text_field :source, placeholder: "Film/Show" %>
-  <%= n.text_area :description, placeholder: "Description" %>
-
-  <%= n.submit %>
+  <div class="fandom-new ">
+  <%= n.text_area :description, placeholder: "Description", class: "form-control" %>
+  </div>
+    <%= n.submit class: 'btn btn-info'%>
 <% end %>
 </div>

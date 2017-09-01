@@ -25,7 +25,8 @@ p {
 }
 
 .guide {
-  padding: inherit;
+  padding: 0px, 20px;
+  margin-top: 20px;
 }
 
 body {
@@ -44,4 +45,15 @@ body {
 
 .fandom {
   text-decoration: underline;
+}
+#comment-space{
+  height: 80px;
+  width: 250px;
+}
+.edit-fandom {
+  margin-top: 10px;
+}
+.fandom-new {
+  margin-top: 25px;
+  margin-bottom: 7px;
 }

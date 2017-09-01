@@ -38,8 +38,8 @@ class UserController < ApplicationController
     @user.name = params[:user][:name]
     @user.bio = params[:user][:bio]
     if params[:user][:user_image]
-      @user.user_image = params[:user][:user_image]
-    end
+    @user.user_image = params[:user][:user_image]
+  end
     @user.user_id = @user.id
     @user.save
     redirect_to user_path(@user)

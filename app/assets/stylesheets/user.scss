@@ -28,7 +28,11 @@ font-size: 19px;
 .profile {
   float: right;
   height: 400px;
-}
+  webkit-box-shadow: 0px 0px 5px 6px rgba(0,0,0,0.70);
+  moz-box-shadow: 0px 0px 5px 6px rgba(0,0,0,0.70);
+  box-shadow: 0px 0px 5px 6px rgba(0,0,0,0.70);
+  }
+
 
 .images {
   padding: 20px 0px;
