@@ -5,7 +5,7 @@ class SessionsController < ApplicationController
   def create
     #first try to find user by email in the db
     @user = User.find_by_email(params[:login][:email])
-    # if user does exist AND they put int he right password:
+    # if user does exist AND they put in the right password:
     if @user && @user.authenticate(params[:login][:password])
       #generate cookie for the user & redirect them
       session[:user_id] = @user.id
